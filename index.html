@@ -14,28 +14,42 @@
 
 <body>
 <header>
+
+		<!-- <img src="http://chiaracodes.com/polygon.png" alt="" />
+		<img src="http://chiaracodes.com/pink_line.png" alt="" />
+		<img src="http://chiaracodes.com/pink_line.png" alt="" />
+	
+		<img src="http://chiaracodes.com/polygon.png" alt="" />
+		<img src="http://chiaracodes.com/polygon.png" alt="" />
+		<img src="http://chiaracodes.com/polygon.png" alt="" /> -->
+
+	
+		
 		<div class="container">
+			<nav>
+			<ul>
 				
-				<ul>
 				
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
+				
+					<li><a class="link__hover" href="#portfolio">Portfolio</a></li>
+					<li><a class="link__hover"href="#about">About</a></li>
+					<li><a class="link__hover"href="#contact">Contact</a></li>
 				</ul>
 	
 			</nav>
 		</div>
+		
 	<div class="container">
 		
 
 
 		<div class="inner__wrapper">
-		
-			<h1 class="cmyk">Chiara</h1>
-			<span class="subtitle___small" > &gt; Front End Web Developer</span>
+		<p>&gt; Front End Web Developer</p>
+		<h1>Chiara Zielinsky</h1>
+
 			
-		
+			
+			
 			
 		</div>
 	
@@ -43,13 +57,17 @@
 		<polyline class="zigzag" fill="none" stroke="#ff546c" stroke-width="7" stroke-miterlimit="10" points="902 245.5 762.5 141.5 623.01 245.5 483.51 141.5 344.01 245.5 204.5 141.5 65 245.5 "/>
 	  </svg> -->
 	  </div>
+
+	  <div class="pastel__box">
+	  <img src="http://chiaracodes.com/decor_pastels.png">
+	  </div>
 </header>
 
-<section>
+<section class="main">
 		<div class="container">
 <div class="box__overlay">
-
-		<h2>About me</h2>
+ <div class="copy__left">
+		<h2>About <span>me</span></h2>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magnam dolorum ratione quaerat iusto et fugit illum laborum!</p>
 		<ul>
 			<li><a href="twitter.com"><i class="fab fa-twitter"></i>
@@ -64,23 +82,26 @@
 			
 		</ul>
 	</div>
+	<div class="copy__left">
+			<img src="http://chiaracodes.com/portfolio_shot.jpeg"/>
+	</div>
+	</div>
+	</div>
 	<div class="container">
 			<span>7</span>
 	
 		</div>
 </div>
-<span class="subtitle___small">My Portfolio</span>
 
 </section>
 
 <section>
 		<div class="container">
-<span class="subtitle___small">My Portfolio</span>
-<h3>A selection of some recently completed projects, covering a wide range of design disciplines </h3>
+
 <ul><li><a href="#js">Javascript</a></li>
 <li><a href="#html">Responsive Design</a></li>
 <li><a href="#react">Wordpress</a></li>
-<a href="#contact">Contact Me</a>
+<li><a href="#contact">Contact Me</a></li>
 </ul>
 </div>
 
@@ -88,40 +109,45 @@
 <div class="grid ">
 		<div class="item" tabindex="1">
 		  <div class="box">
-			<div class="diamond"><span>1</span></div>
-			<div class="tooltip">grid-area: hero</div>
+			<span>iHeal</span>
+			
 		  </div>
 		</div>
+	
 		<div class="item" tabindex="2">
 		  <div class="box">
-			<div class="diamond"><span>2</span></div>
-			<div class="tooltip">grid-area: big</div>
+				<div class="tooltip">Javascript, Jquery, HTML, CSS</div>
 		  </div>
 		</div>
-		<div class="item" tabindex="3">
-		  <div class="box">
-			<div class="diamond"><span>3</span></div>
-			<div class="tooltip">grid-area: medium</div>
-		  </div>
-		</div>
-		<div class="item" tabindex="4">
-		  <div class="box">
-			<div class="diamond"><span>4</span></div>
-			<div class="tooltip">grid-area: medium</div>
-		  </div>
-		</div>
-		<div class="item" tabindex="5">
-		  <div class="box">
-			<div class="diamond"><span>5</span></div>
-			<div class="tooltip">grid-area: small</div>
-		  </div>
-		</div>
-		<div class="item" tabindex="6">
-		  <div class="box">
-			<div class="diamond"><span>6</span></div>
-			<div class="tooltip">grid-area: small</div>
-		  </div>
-		</div>
+		<div class="item" tabindex="1">
+				<div class="box">
+				  <span>iHeal</span>
+				  
+				</div>
+			  </div>
+		  
+			  <div class="item" tabindex="2">
+				<div class="box">
+					  <div class="tooltip">Javascript, Jquery, HTML, CSS</div>
+				</div>
+			  </div>	<div class="item" tabindex="1">
+					<div class="box">
+					  <span>iHeal</span>
+					  
+					</div>
+				  </div>
+			  
+				  <div class="item" tabindex="2">
+					<div class="box">
+						  <div class="tooltip">Javascript, Jquery, HTML, CSS</div>
+					</div>
+				  </div>
+		
+		
+	</div>
+		
+		
+		
 	</section>
 		<footer>
 				<div class="container">
@@ -183,23 +209,35 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 	<script src="public/scripts/main.js"></script>
-	<script>(function($){
-			// variables
-			elementWidth = $('ul').width(),
-			containerWidth = $('nav').width(),
-			difference = elementWidth-containerWidth,
-			finalWidth = difference * 1.5,
-			element = $('ul');
-			
-			// active on click
-			$('li').on('click', function(){
-			  $('li').removeClass('active');
-			  $(this).addClass('active');
-			});
-			
-		  })(jQuery);
-		  
-		  
-		  </script>
+	<script>
+	
+	
+	function getRandomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+$.fn.randomOrder = function(animate) {
+  this.each(function() {
+    var image = $(this);
+    
+    // Viewport Dimensions
+    var vpHeight = $(window).height();
+    var vpWidth = $(window).width();
+    
+    // Image Position
+    var xPos = getRandomInt(0, vpWidth - image.width());
+    var yPos = getRandomInt(0, vpHeight - image.height());
+    var zIndex = getRandomInt(0,13);
+    
+    // Animation Duration
+    if(animate) var dur = 500;
+    else var dur = 0;
+    
+    image.animate({left: xPos, top: yPos, 'z-index': zIndex}, dur);
+  });
+};
+
+
+	</script>
 </body>
 </html>
