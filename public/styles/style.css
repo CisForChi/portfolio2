@@ -135,195 +135,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   max-width: 900px;
   margin: 0 auto; }
 
-@supports (display: grid) {
-  .grid {
-    display: grid;
-    grid-gap: 1vw;
-    min-height: 100vh;
-    padding: 2.5vw; }
-  .grid {
-    grid-template-columns: repeat(1);
-    grid-template-areas: "hero   hero" "big1   big1" "med1   med1" "med2   med2" "small1 small2" "small3 small4" "small5 small6" "small7 small8" "small9 small10"; }
-  @media screen and (min-width: 750px) {
-    .grid {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(1, 50vh);
-      grid-template-areas: "hero   hero   hero   med1   med1" "hero   hero   hero   med2   med2" "big1   big1   big1   big1   big1" "small1 small2 small3 small4 small5" "small6 small7 small8 small9 small10"; } }
-  @media screen and (min-width: 1400px) {
-    .grid {
-      grid-template-columns: repeat(6, 1fr);
-      grid-template-rows: auto;
-      grid-template-areas: "small1 hero   hero hero med1   med1" "small2 hero   hero hero med2   med2" "small3 small5 big1 big1 small7 small8" "small4 small6 big1 big1 small9 small10"; } }
-  .grid .item:nth-child(1) {
-    grid-area: hero; }
-  .grid .item:nth-child(2) {
-    grid-area: big1; }
-  .grid .item:nth-child(3) {
-    grid-area: med1; }
-  .grid .item:nth-child(4) {
-    grid-area: med2; }
-  .grid .item:nth-child(5) {
-    grid-area: small1; }
-  .grid .item:nth-child(6) {
-    grid-area: small2; }
-  .grid .item:nth-child(7) {
-    grid-area: small3; }
-  .grid .item:nth-child(8) {
-    grid-area: small4; }
-  .grid .item:nth-child(9) {
-    grid-area: small5; }
-  .grid .item:nth-child(10) {
-    grid-area: small6; }
-  .grid .item:nth-child(11) {
-    grid-area: small7; }
-  .grid .item:nth-child(12) {
-    grid-area: small8; }
-  .grid .item:nth-child(13) {
-    grid-area: small9; }
-  .grid .item:nth-child(14) {
-    grid-area: small10; } }
-
-/* flexbox fallback is the browser does not support display:grid */
-@supports not (display: grid) {
-  .grid {
-    display: grid;
-    grid-gap: 1vw;
-    min-height: 100vh;
-    padding: 1.5vw; }
-  .grid .item {
-    min-height: 20vh;
-    margin: 0.75vw; }
-  .grid .item:nth-child(1) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(100% - 1.5vw);
-            flex: 0 1 calc(100% - 1.5vw);
-    height: 50vh; }
-  .grid .item:nth-child(2) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(100% - 1.5vw);
-            flex: 0 1 calc(100% - 1.5vw);
-    height: 30vh; }
-  .grid .item:nth-child(3) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(100% - 1.5vw);
-            flex: 0 1 calc(100% - 1.5vw); }
-  .grid .item:nth-child(4) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(100% - 1.5vw);
-            flex: 0 1 calc(100% - 1.5vw); }
-  .grid .item:nth-child(5) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(6) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(7) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(8) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(9) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(10) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(11) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(12) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(13) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  .grid .item:nth-child(14) {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 calc(50% - 1.5vw);
-            flex: 0 1 calc(50% - 1.5vw); }
-  @media screen and (min-width: 750px) {
-    .grid .item:nth-child(1) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(60% - 1.5vw);
-              flex: 0 1 calc(60% - 1.5vw); }
-    .grid .item:nth-child(2) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(40% - 1.5vw);
-              flex: 0 1 calc(40% - 1.5vw);
-      height: 50vh; } }
-  @media screen and (min-width: 1400px) {
-    .grid .item:nth-child(1) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(60% - 1.5vw);
-              flex: 0 1 calc(60% - 1.5vw); }
-    .grid .item:nth-child(2) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(40% - 1.5vw);
-              flex: 0 1 calc(40% - 1.5vw); }
-    .grid .item:nth-child(3) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(50% - 1.5vw);
-              flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(4) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(50% - 1.5vw);
-              flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(5) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(6) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(7) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(8) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(9) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(10) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(11) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(12) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(13) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); }
-    .grid .item:nth-child(14) {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(25% - 1.5vw);
-              flex: 0 1 calc(25% - 1.5vw); } } }
-
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
 .container {
+  z-index: 90000000000;
+  position: relative;
   margin-right: auto;
   /* 1 */
   margin-left: auto;
@@ -334,6 +152,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   /* 3 */
   padding-left: 10px;
   /* 3 */ }
+  @media only screen and (max-width: 640px) {
+    .container {
+      max-width: 100%;
+      padding: 0;
+      margin: auto; } }
 
 html {
   -webkit-box-sizing: border-box;
@@ -394,6 +217,37 @@ a:hover {
   -webkit-text-decoration: underline #ffaabc;
           text-decoration: underline #ffaabc; }
 
+.dwn__btn {
+  margin-top: auto;
+  display: inline-block;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  right: 50%;
+  -webkit-animation: bounce 0.5s;
+          animation: bounce 0.5s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  font-size: 30px; }
+
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0); } }
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0); } }
+
 header {
   background: #0f105e;
   z-index: 0;
@@ -408,6 +262,9 @@ header {
 
 nav {
   width: 100%; }
+  @media only screen and (max-width: 640px) {
+    nav {
+      display: none; } }
 
 .cmyk {
   color: #000;
@@ -428,7 +285,12 @@ footer {
 
 .inner__wrapper {
   margin: 0 auto;
-  padding-top: 5em; }
+  padding-top: 5em;
+  z-index: 999; }
+  @media only screen and (max-width: 320px) {
+    .inner__wrapper {
+      width: 100%;
+      padding: 0; } }
   .inner__wrapper a {
     border: 1px solid #ffb09f;
     border-radius: 44px 44px;
@@ -436,17 +298,56 @@ footer {
     width: 150px;
     padding: 10px;
     text-align: center; }
+  .inner__wrapper .mobile__nav {
+    display: none; }
+    @media only screen and (max-width: 640px) {
+      .inner__wrapper .mobile__nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0; } }
+    @media only screen and (max-width: 640px) {
+      .inner__wrapper .mobile__nav a {
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin: 0;
+        border: none;
+        font-size: 10px;
+        width: auto; } }
 
 header {
+  text-align: left;
   background: #fff; }
+  @media only screen and (max-width: 640px) {
+    header {
+      padding: 5em;
+      height: auto; } }
+  header span {
+    color: #CBB5EA;
+    font-size: 18px;
+    margin: 0;
+    line-height: 0;
+    font-weight: 100;
+    margin-right: .25em; }
   header h1 {
     color: #000;
     text-align: center;
     font-weight: 100;
-    font-size: 78px;
+    font-size: 4rem;
     line-height: 1.2;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    text-align: left; }
+    @media only screen and (max-width: 640px) {
+      header h1 {
+        font-size: 9vw; } }
+  header p {
+    font-size: 14px; }
+    @media only screen and (max-width: 640px) {
+      header p {
+        font-size: 3vw; } }
   header ul li {
     padding: 0;
     font-size: 13px;
@@ -495,12 +396,20 @@ a {
 
 header {
   z-index: 1; }
+  @media only screen and (max-width: 640px) {
+    header .container {
+      background: url("http://chiaracodes.com/decor_pastels.png");
+      background-size: cover;
+      background-repeat: no-repeat; } }
 
 .pastel__box {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 0; }
+  z-index: 999999; }
+  @media only screen and (max-width: 640px) {
+    .pastel__box img {
+      display: none; } }
 
 body {
   font-family: 'Glacial indifference'; }
@@ -543,7 +452,8 @@ body {
     --size: 400px; }
 
 .main {
-  background: #f4f5f8; }
+  background: #f4f5f8;
+  padding: 50px; }
 
 .box__overlay {
   display: -webkit-inline-box;
@@ -560,12 +470,22 @@ body {
   margin: 0 auto;
   z-index: 1;
   height: auto;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
   padding: 20px 25px; }
+  @media only screen and (max-width: 640px) {
+    .box__overlay {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      width: 100%;
+      -webkit-transform: none;
+              transform: none; } }
   .box__overlay .container {
     max-width: 80%;
     margin: 0; }
+    @media only screen and (max-width: 640px) {
+      .box__overlay .container {
+        width: 100%; } }
     .box__overlay .container span {
       color: yellow; }
   .box__overlay ul {
@@ -573,24 +493,73 @@ body {
     display: -ms-inline-flexbox;
     display: inline-flex; }
   .box__overlay h2 {
-    font-size: 36px;
     font-weight: bold;
     color: #000;
-    line-height: .2em; }
+    margin: 0;
+    padding: 0; }
   .box__overlay p {
-    color: #000; }
+    color: #000;
+    font-size: 14px;
+    margin: 0;
+    padding: 0; }
 
 .copy__left {
   width: 50%;
   padding: 25px; }
-  .copy__left span {
-    color: #3ed2a7; }
+  @media only screen and (max-width: 640px) {
+    .copy__left {
+      padding: 0;
+      width: 100%; }
+      .copy__left h2, .copy__left p {
+        font-size: 5vw; } }
+  .copy__left svg {
+    color: #CBB5EA; }
+    .copy__left svg:hover {
+      color: #CBF0B8; }
+  .copy__left p span {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #CBF0B8;
+            text-decoration-color: #CBF0B8;
+    -webkit-text-decoration-style: wavy;
+            text-decoration-style: wavy; }
+  .copy__left a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: inherit;
+    text-transform: none;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    height: auto;
+    overflow: inherit;
+    letter-spacing: inherit;
+    color: #000;
+    text-decoration: underline;
+    -webkit-text-decoration-color: #CBF0B8;
+            text-decoration-color: #CBF0B8; }
+    .copy__left a:hover {
+      color: #CBF0B8; }
   .copy__left img {
-    border-radius: 50%;
+    border-radius: 25%;
     width: 186px;
     height: 229px;
     display: block;
     margin-left: auto; }
+    @media only screen and (max-width: 640px) {
+      .copy__left img {
+        width: 75%;
+        height: 75%;
+        margin: 0 auto; } }
+
+.twice {
+  background: url("http://chiaracodes.com/bg.png");
+  background-repeat: no-repeat; }
 
 .box {
   display: -webkit-box;
@@ -607,48 +576,121 @@ body {
     margin-bottom: 3em;
     font-size: 2em; }
 
-@supports not (display: grid) {
-  body:before {
-    content: 'Sorry, seems like your browser doesn\'t support display: grid. Below is the flexbox fallback.';
+svg {
+  width: 25px;
+  height: 25px; }
+
+.box__flex {
+  width: 25%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 1em;
+  margin-bottom: 1em;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center; }
+  .box__flex img {
+    width: 95%;
+    height: 95%;
     display: block;
-    padding: 2rem 2rem 0;
-    color: #ffffff;
-    text-align: center; } }
+    margin: 0 auto; }
+  @media only screen and (max-width: 640px) {
+    .box__flex {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 2em; } }
+  .box__flex h4 {
+    font-size: 30px;
+    font-weight: 100;
+    text-align: left; }
+  .box__flex p {
+    font-size: 17px;
+    text-align: left; }
+    @media only screen and (max-width: 640px) {
+      .box__flex p {
+        font-size: 14px; } }
 
-@media screen and (min-width: 1400px) {
-  .header h2 {
-    font-weight: normal;
-    font-size: 1.5rem; } }
-
-.grid .item:hover .diamond,
-.grid .item:focus .diamond {
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-  -webkit-transform: rotateZ(45deg) scale(1.2);
-          transform: rotateZ(45deg) scale(1.2); }
-
-.grid .item:hover .tooltip,
-.grid .item:focus .tooltip {
-  opacity: 1; }
-
-.grid .item {
-  position: relative;
-  padding: 1vw;
-  background-position: left bottom;
-  background-position: top left;
-  outline: transparent; }
-
-.grid .item:hover,
-.grid .item:focus {
-  background-position: top right; }
-
-.grid .item:focus {
-  outline: 2px solid #3eabfa; }
-
-.grid .item:nth-child(1) {
-  background: url("http://chiaracodes.com/placeit1.png");
-  background-size: auto 90%;
+.content {
+  background: url("http://chiaracodes.com/decor_pastels.png");
+  background-size: 20% auto;
+  background-position-x: 0%;
+  background-position-y: 0%;
   background-repeat: no-repeat; }
 
-.grid .item:nth-child(2) {
-  background-image: linear-gradient(45deg, #fb7ef6 0%, #cbabfb 60%); }
+.content .inner__wrapper {
+  padding: 0;
+  margin: 0; }
+  .content .inner__wrapper a {
+    border: none;
+    width: 100%; }
+  .content .inner__wrapper li {
+    width: 100%; }
+
+.content {
+  padding: 25px 50px; }
+  .content .wrapper {
+    max-width: 75%;
+    margin-right: auto;
+    border: none; }
+    @media only screen and (max-width: 640px) {
+      .content .wrapper {
+        max-width: 100%; } }
+  .content h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 48px; }
+    @media only screen and (max-width: 640px) {
+      .content h2 {
+        font-size: 7vw; } }
+  .content p {
+    font-size: 14px; }
+  .content span {
+    color: #CBB5EA;
+    display: inline-block; }
+
+html {
+  font-size: 2vw; }
+
+h2 {
+  font-size: 40px; }
+
+.skills {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  background: url("http://chiaracodes.com/decor_pastels.png");
+  background-size: 20% auto;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  padding: 35px 50px; }
+  .skills .copy__icons {
+    max-width: 45%;
+    margin: 0 auto; }
+    .skills .copy__icons ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap; }
+    .skills .copy__icons li {
+      margin: .5em; }
+    .skills .copy__icons ul li:nth-child(1n+1) {
+      color: #caf1b6; }
+    .skills .copy__icons ul li:nth-child(2n+2) {
+      color: #cbb4ec; }
+    .skills .copy__icons ul li:nth-child(3n+3) {
+      color: #b2d6ef; }

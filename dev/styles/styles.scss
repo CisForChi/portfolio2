@@ -1,129 +1,13 @@
 
-@supports (display: grid) {
 
-    .grid {
-        display: grid;
-        grid-gap: 1vw;
-        min-height: 100vh;
-        padding: 2.5vw;
-    }
-  
-    .grid {
-      grid-template-columns: repeat(1);
-     
-      grid-template-areas:
-        "hero   hero"
-        "big1   big1"
-        "med1   med1"
-        "med2   med2"
-        "small1 small2"
-        "small3 small4"
-        "small5 small6"
-        "small7 small8"
-        "small9 small10";
-    }
-  
-    @media screen and (min-width: 750px) {
-      .grid {
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, 50vh);
-        grid-template-areas:
-          "hero   hero   hero   med1   med1"
-          "hero   hero   hero   med2   med2"
-          "big1   big1   big1   big1   big1"
-          "small1 small2 small3 small4 small5"
-          "small6 small7 small8 small9 small10";
-      }
-    }
-  
-    @media screen and (min-width: 1400px) {
-      .grid {
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas:
-        "small1 hero   hero hero med1   med1"
-        "small2 hero   hero hero med2   med2"
-        "small3 small5 big1 big1 small7 small8"
-        "small4 small6 big1 big1 small9 small10";
-      }
-    }
-  
-    .grid .item:nth-child(1)  { grid-area: hero; }
-    .grid .item:nth-child(2)  { grid-area: big1; }
-    .grid .item:nth-child(3)  { grid-area: med1; }
-    .grid .item:nth-child(4)  { grid-area: med2; }
-    .grid .item:nth-child(5)  { grid-area: small1; }
-    .grid .item:nth-child(6)  { grid-area: small2; }
-    .grid .item:nth-child(7)  { grid-area: small3; }
-    .grid .item:nth-child(8)  { grid-area: small4; }
-    .grid .item:nth-child(9)  { grid-area: small5; }
-    .grid .item:nth-child(10) { grid-area: small6; }
-    .grid .item:nth-child(11) { grid-area: small7; }
-    .grid .item:nth-child(12) { grid-area: small8; }
-    .grid .item:nth-child(13) { grid-area: small9; }
-    .grid .item:nth-child(14) { grid-area: small10; }
-  
-  }
-  
-  /* flexbox fallback is the browser does not support display:grid */
-  @supports not (display: grid) {
-  
-    .grid {
-         display: grid;
-    grid-gap: 1vw;
-    min-height: 100vh;
-    padding: 1.5vw;
-    }
-  
-    .grid .item {
-      min-height: 20vh;
-      margin: 0.75vw;
-    }
-  
-    .grid .item:nth-child(1)  { flex: 0 1 calc(100% - 1.5vw); height: 50vh; }
-    .grid .item:nth-child(2)  { flex: 0 1 calc(100% - 1.5vw); height: 30vh; }
-    .grid .item:nth-child(3)  { flex: 0 1 calc(100% - 1.5vw); }
-    .grid .item:nth-child(4)  { flex: 0 1 calc(100% - 1.5vw); }
-    .grid .item:nth-child(5)  { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(6)  { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(7)  { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(8)  { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(9)  { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(10) { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(11) { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(12) { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(13) { flex: 0 1 calc(50% - 1.5vw); }
-    .grid .item:nth-child(14) { flex: 0 1 calc(50% - 1.5vw); }
-  
-    @media screen and (min-width: 750px) {
-      .grid .item:nth-child(1)  { flex: 0 1 calc(60% - 1.5vw); }
-      .grid .item:nth-child(2)  { flex: 0 1 calc(40% - 1.5vw); height: 50vh; }
-    }
-  
-    @media screen and (min-width: 1400px) {
-      .grid .item:nth-child(1)  { flex: 0 1 calc(60% - 1.5vw); }
-      .grid .item:nth-child(2)  { flex: 0 1 calc(40% - 1.5vw); }
-      .grid .item:nth-child(3)  { flex: 0 1 calc(50% - 1.5vw); }
-      .grid .item:nth-child(4)  { flex: 0 1 calc(50% - 1.5vw); }
-      .grid .item:nth-child(5)  { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(6)  { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(7)  { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(8)  { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(9)  { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(10) { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(11) { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(12) { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(13) { flex: 0 1 calc(25% - 1.5vw); }
-      .grid .item:nth-child(14) { flex: 0 1 calc(25% - 1.5vw); }
-    }
-  
-  }
-  
+    
 
   *,*:before,*:after {
     box-sizing: border-box;
   }
   .container {
+    z-index:90000000000;
+      position:relative;
     margin-right: auto; /* 1 */
     margin-left:  auto; /* 1 */
   
@@ -131,6 +15,13 @@
   
     padding-right: 10px; /* 3 */
     padding-left:  10px; /* 3 */
+
+    @media only screen and (max-width: 640px) {
+       max-width:100%;
+       padding:0;
+       margin:auto;
+
+       }
   }
 
 
@@ -187,6 +78,24 @@ a:hover{
   
     text-decoration:underline #ffaabc;
 }
+
+.dwn__btn {
+    margin-top:auto;
+    display:inline-block;
+    position:absolute;
+    bottom:3%;
+    left:50%;
+    right:50%;
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    font-size:30px;
+    @keyframes bounce {
+        from { transform: translate3d(0, 0, 0);     }
+        to   { transform: translate3d(0, 10px, 0); }
+      }
+
+}
   header {
       background: #0f105e;
       z-index:0;
@@ -204,7 +113,10 @@ a:hover{
 
 nav {
 width:100%;  
+@media only screen and (max-width: 640px) {
+   display:none;
     
+}
 }
 
   .cmyk {
@@ -255,6 +167,12 @@ width:100%;
   .inner__wrapper{
     margin:0 auto;
    padding-top:5em;
+   z-index:999;
+
+   @media only screen and (max-width: 320px) {
+    width:100%;
+    padding:0;
+   }
  
   a {
       border:1px solid #ffb09f;
@@ -264,19 +182,68 @@ width:100%;
 padding:10px;
 text-align:center;
   }
+  .mobile__nav {
+    display:none;
+    @media only screen and (max-width: 640px) {
+        display:flex;
+        margin:0;
+       
+    }
+    a{
+        @media only screen and (max-width: 640px)  {
+            
+            padding:0;
+            display:flex;
+            margin:0;
+            border:none;
+            font-size:10px;
+width:auto;
+        }
+        
+        
+        
+    }
+}
   
       }
 
     header {
-
+        @media only screen and (max-width: 640px) 
+    {
+       padding:5em;
+        height:auto;
+    }
+        span {
+            color:#CBB5EA;
+            font-size:18px;
+            margin:0;
+            line-height:0;
+            font-weight:100;
+            margin-right:.25em;
+            
+        }
+        text-align:left;
         h1 {
             color:#000;
             text-align:center;
             font-weight:100;
-            font-size:78px;
+            font-size:4rem;
             line-height:1.2;
             padding:0;
             margin:0;
+            text-align:left;
+
+            @media only screen and (max-width: 640px) {
+                font-size:9vw;
+               }
+
+        }
+        p {
+            font-size:14px;
+            @media only screen and (max-width: 640px) {
+            font-size:3vw;
+             
+         }
         }
         background:#fff;
         ul li {
@@ -333,12 +300,35 @@ text-align:center;
         transform: scale(1);
       }
 header{   z-index:1;
+
+   
+   .container {
+    @media only screen and (max-width: 640px) {
+        background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:cover;
+        background-repeat:no-repeat;
+        
+         
+       }
+       
+   }
+      
 }
       .pastel__box {
           position:absolute;
           top:0;
           right:0;
-          z-index:0;
+          z-index:999999;
+       
+          img {
+            @media only screen and (max-width: 640px) {
+                display:none;
+                 
+               }
+          }
+         
+
+       
       }
 
       body {
@@ -390,11 +380,13 @@ header{   z-index:1;
 
     .main {
         background:#f4f5f8;
+        padding:50px;
     }
 
     .box__overlay {
         display:inline-flex;
         flex-direction:row;
+    
        color:#000;
       background: #f4f5f8;
     box-shadow: 25px 43px 100px 0px rgba(25, 26, 100, 0.2);
@@ -402,12 +394,20 @@ header{   z-index:1;
     margin:0 auto;
     z-index:1;
     height:auto;
-    transform:translateY(-30%);
+   
    padding:20px 25px;
+   @media only screen and (max-width: 640px) {
+    flex-direction:column;
+    width:100%;
+    transform:none;
+    
+}
     
     .container {
     max-width:80%;
     margin:0;
+    @media only screen and (max-width: 640px) {
+        width:100%;}
     
     span {
         color:yellow;
@@ -417,13 +417,18 @@ header{   z-index:1;
         display:inline-flex;
     }
     h2 {
-        font-size: 36px;
+        
         font-weight:bold;
         color:#000;
-        line-height:.2em;
+        margin:0;
+        padding:0;
+       
     }
     p {
         color:#000;
+        font-size:14px;
+       margin:0;
+       padding:0;
     }
     
     
@@ -432,19 +437,84 @@ header{   z-index:1;
     .copy__left {
         width:50%;
         padding:25px;
-span {
-    color:#3ed2a7;
+        @media only screen and (max-width: 640px) {
+        padding:0;
+        width:100%;
+        h2, p{
+            font-size:5vw;
+        }
+
+      
+        }
+
+         
+    
+            
+        
+    svg {
+        color:#CBB5EA;
+        &:hover {
+                color:#CBF0B8;
+            }
+       
+    }
+p span {
+   
+    display:inline-flex;
+  
+
+        text-decoration:underline;
+        text-decoration-color:#CBF0B8;
+    text-decoration-style: wavy;
+  
+    
+ 
+}
+ a {
+    display:inline-block;
+    margin:0;
+    padding:0;
+    text-align:left;
+   font-size:inherit;
+   text-transform:none;
+   font-family:inherit;
+   font-style:inherit;
+   font-weight:inherit;
+   line-height:inherit;
+height:auto;
+overflow:inherit;
+letter-spacing:inherit;
+color:#000;
+text-decoration:underline;
+text-decoration-color:#CBF0B8;
+    
+
+ &:hover {
+     color:#CBF0B8;
+ }
+
 }
         img {
-            border-radius:50%;
+            border-radius:25%;
             width:186px;
             height:229px;
             display:block;
             margin-left:auto;
             
+            @media only screen and (max-width: 640px) {
+                width:75%;
+                height:75%;
+                margin:0 auto;
+                
+            }
             
         }
     }
+     .twice {
+        background:url('http://chiaracodes.com/bg.png');  
+         
+        background-repeat:no-repeat;
+     }
     .box {
         display: flex;
         justify-content: center;
@@ -456,102 +526,156 @@ span {
     font-size:2em;
    }
         
-      }
-      @supports not (display: grid) {
-        body:before {
-          content: 'Sorry, seems like your browser doesn\'t support display: grid. Below is the flexbox fallback.';
-          display: block;
-          padding: 2rem 2rem 0;
-          color: #ffffff;
-          text-align: center;
-        }
-      }
-      
-      
-      @media screen and (min-width: 1400px) {
-      
-      
-      
-        .header h2 {
-          font-weight: normal;
-          font-size: 1.5rem;
-        }
-      }
-      
-    
-   
-      .grid .item:hover .diamond,
-      .grid .item:focus .diamond {
-        box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-        transform:  rotateZ(45deg) scale(1.2);
-      }
-      
-    //   .tooltip {
-    //     position: absolute;
-    //     z-index: 1;
-    //     padding: 0.25rem 1rem;
-    //     border-radius: 5px;
-    //     background: #29343d;
-    //     opacity: 0;
-    //     color: #cedfe9;
-    //     font-size: 0.875rem;
-    //     transition: opacity 500ms, transform 500ms;
-    //   }
-      
-    //   .tooltip:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: -9px;
-    //     left: calc(50% - 10px);
-    //     width: 0;
-    //     height: 0;
-    //     border-left: 10px solid transparent;
-    //     border-right: 10px solid transparent;
-    //     border-bottom: 10px solid #29343d;
-    //   }
-      
-      .grid .item:hover .tooltip,
-      .grid .item:focus .tooltip {
-        opacity: 1;
-        
-      }
-      
-      .grid .item {
-        position: relative;
-        padding: 1vw;
-        background-position:  left bottom;
-        
-        
-        background-position: top left;
-        outline: transparent;
-      }
-      
-      .grid .item:hover,
-      .grid .item:focus {
-        background-position: top right;
-      }
-      
-      .grid .item:focus {
-        outline: 2px solid #3eabfa;
-      }
-      
-      .grid .item:nth-child(1)  { 
-          background:url('http://chiaracodes.com/placeit1.png'); 
-          background-size:auto 90%;
-          background-repeat:no-repeat;
-          
+}
+
+
+    svg {
+        width:25px;
+        height:25px;
+       
     }
-      .grid .item:nth-child(2)  { background-image: linear-gradient(45deg, #fb7ef6 0%, #cbabfb 60%); }
-    //   .grid .item:nth-child(3)  { background-image: linear-gradient(45deg, #70c1fb 0%, #79ebe0 60%); }
-    //   .grid .item:nth-child(4)  { background-image: linear-gradient(45deg, #79ebe0 0%, #70c1fb 60%); }
-    //   .grid .item:nth-child(5),
-    //   .grid .item:nth-child(6),
-    //   .grid .item:nth-child(7),
-    //   .grid .item:nth-child(8),
-    //   .grid .item:nth-child(9),
-    //   .grid .item:nth-child(10),
-    //   .grid .item:nth-child(11),
-    //   .grid .item:nth-child(12),
-    //   .grid .item:nth-child(13),
-    //   .grid .item:nth-child(14) { background-image: linear-gradient(45deg, #feeeab 0%, #fb7eb3 60%); }
+
+
+ 
+
+ 
+.box__flex {
+   width:25%;
+    display:inline-flex;
+    margin:1em;
+    margin-bottom:1em;
+    flex-flow:wrap;
+    justify-content:center;
+    text-align:center;
+    img {
+        width:95%;
+        height:95%
+;display:block;
+margin:0 auto;
+       
+    }
+    @media only screen and (max-width: 640px) {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        padding:2em;
+    }
+    h4 {
+        font-size:30px;
+        font-weight:100;
+        text-align:left;
+       
+    }
+    p {font-size:17px;
+    text-align:left;
+
+    @media only screen and (max-width: 640px) {
+      font-size:14px;
+ 
+        }}
+}   
+.content {
+    background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:20% auto;
+        background-position-x:0%;
+        background-position-y:0%;
+        background-repeat:no-repeat;
+}
+.content .inner__wrapper{
+    padding:0;
+    margin:0;
     
+
+a {
+    border:none;
+    width:100%;
+}
+li {
+    width:100%;
+}
+}
+
+.content {
+
+padding:25px 50px;
+
+    .wrapper {
+     max-width:75%;
+     margin-right:auto;
+     border:none;
+    
+    @media only screen and (max-width: 640px) {
+        max-width:100%;
+
+    }
+}
+h2 {
+    margin:0;
+    padding:0;
+    font-size:48px;
+
+    @media only screen and (max-width: 640px) {
+        font-size:7vw;
+    }
+}
+    p {font-size:14px;}
+  
+    
+    span {
+        color:#CBB5EA;
+        display:inline-block;
+    }
+}
+
+html {
+    font-size: 2vw;
+}
+
+h2 {
+    font-size:40px;
+}
+
+
+
+.skills {
+  
+        width:80%;
+        display:flex;
+        flex-flow:wrap;
+    
+        background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:20% auto;
+        background-position-x:100%;
+        background-position-y:50%;
+        background-repeat:no-repeat;
+    
+        padding:35px 50px;
+.copy__icons {
+    
+    
+           
+        
+    max-width:45%;
+    margin:0 auto;
+        ul {
+           
+            display:flex;
+            flex-flow:wrap;
+        }
+        li {
+            margin:.5em;
+        }
+        ul li:nth-child(1n+1) {
+            color:#caf1b6;
+        }
+        ul li:nth-child(2n+2) {
+            color:#cbb4ec;
+        }
+
+        ul li:nth-child(3n+3) {
+            color:#b2d6ef;
+        }
+        
+    
+}
+}
