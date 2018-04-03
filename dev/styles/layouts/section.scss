@@ -1,0 +1,96 @@
+//about section
+
+    
+
+    
+  
+    .copy__left {
+        width:28%;
+
+        span {
+            svg {
+                display:block;
+            }
+        }
+    }
+
+
+   //portfolio 
+
+   .box__flex {
+   width:25%;
+    display:inline-flex;
+    margin:1em;
+    margin-bottom:1em;
+    flex-flow:wrap;
+    justify-content:center;
+    text-align:center;
+    img {
+        width:95%;
+        height:95%
+;display:block;
+margin:0 auto;
+       
+    }
+    @media only screen and (max-width: 640px) {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        padding:2em;
+    }
+    h4 {
+        font-size:30px;
+        font-weight:100;
+        text-align:left;
+       
+    }
+    p {font-size:17px;
+    text-align:left;
+
+    @media only screen and (max-width: 640px) {
+      font-size:14px;
+ 
+        }}
+} 
+
+.content {
+    background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:20% auto;
+        background-position-x:0%;
+        background-position-y:0%;
+        background-repeat:no-repeat;
+}
+
+.content {
+
+padding:25px 50px;
+
+    .wrapper {
+     max-width:75%;
+     margin-right:auto;
+     border:none;
+    
+    @media only screen and (max-width: 640px) {
+        max-width:100%;
+
+    }
+}
+
+}
+//skills
+
+.skills {
+  
+        width:80%;
+        display:flex;
+        flex-flow:wrap;
+    
+        background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:20% auto;
+        background-position-x:100%;
+        background-position-y:50%;
+        background-repeat:no-repeat;
+    
+        padding:35px 50px;
+
+}

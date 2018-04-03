@@ -1,0 +1,70 @@
+  
+
+
+  .container {
+
+
+    z-index:90000000000;
+      position:relative;
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 70%; /* 2 */
+  
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+
+
+
+@media only screen and (min-width: 1200px) {
+  max-width:95%;
+
+
+}
+    @media only screen and (max-width: 640px) {
+       max-width:100%;
+       padding:0;
+       margin:auto;
+
+       }
+  }
+
+     .container {
+    @media only screen and (max-width: 640px) {
+        background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:cover;
+        background-repeat:no-repeat;
+        
+         
+       }
+       
+
+
+
+   }
+
+ 
+
+  .inner__wrapper{
+    margin:0 auto;
+   padding-top:5em;
+   z-index:999;
+
+   @media only screen and (max-width: 320px) {
+    width:100%;
+    padding:0;
+   }
+ 
+  a {
+      border:1px solid #ffb09f;
+      border-radius: 44px 44px
+;display:inline-block
+;width:150px;
+padding:10px;
+text-align:center;
+  }
+
+  
+      }
+
+  
