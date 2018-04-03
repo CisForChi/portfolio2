@@ -1,0 +1,693 @@
+
+
+    
+
+  *,*:before,*:after {
+    box-sizing: border-box;
+  }
+  .container {
+    z-index:90000000000;
+      position:relative;
+    margin-right: auto; /* 1 */
+    margin-left:  auto; /* 1 */
+  
+    max-width: 70%; /* 2 */
+  
+    padding-right: 10px; /* 3 */
+    padding-left:  10px; /* 3 */
+
+    @media only screen and (max-width: 640px) {
+       max-width:100%;
+       padding:0;
+       margin:auto;
+
+       }
+  }
+
+
+
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  .subtitle___small {
+    color:  #8b8cb3;
+    font-size: 24px;
+    font-weight: 700;
+    margin:0;
+    padding:0;
+    line-height:0;
+  
+ 
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    list-style: none;
+  
+    
+}li {
+  margin:1em;
+  list-style:none;
+  display: flex;
+    align-items: flex-start;
+}
+
+a {
+    text-decoration:none;
+    color:  #ffffff;
+    font-size: 13px;/* Approximation due to font substitution */
+    font-weight: 400;
+    line-height: 72px;/* Approximation due to font substitution */
+    text-align: right;
+}
+
+a:hover{
+  
+    text-decoration:underline #ffaabc;
+}
+
+.dwn__btn {
+    margin-top:auto;
+    display:inline-block;
+    position:absolute;
+    bottom:3%;
+    left:50%;
+    right:50%;
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    font-size:30px;
+    @keyframes bounce {
+        from { transform: translate3d(0, 0, 0);     }
+        to   { transform: translate3d(0, 10px, 0); }
+      }
+
+}
+  header {
+      background: #0f105e;
+      z-index:0;
+      text-align:center;
+      height:100vh;
+      font-family:'Glacial indifference';
+
+      img {
+          width:381px;
+          height:336px;
+          display:block;
+;margin-left:auto;
+      }
+  }
+
+nav {
+width:100%;  
+@media only screen and (max-width: 640px) {
+   display:none;
+    
+}
+}
+
+  .cmyk {
+      color:#000;
+    text-shadow:  0.322rem -0.25rem rgba(#CBB5EA, .899),
+              
+                  0        0.45rem  rgba(#F1EBBA, 0.55);  
+  margin:0;
+  padding:0;
+    font-size: 6rem;
+    display:block;
+ 
+  
+
+
+    
+  }
+    
+  
+  
+  
+
+
+  
+  footer {
+    
+
+  }
+
+
+
+  .txt__hightlight {
+    color:  #ff546c;
+    font-size: 50px;
+    
+  }
+  .txt__hightlight:before{
+   
+  
+  
+    
+
+  
+  }
+
+  .inner__wrapper{
+    margin:0 auto;
+   padding-top:5em;
+   z-index:999;
+
+   @media only screen and (max-width: 320px) {
+    width:100%;
+    padding:0;
+   }
+ 
+  a {
+      border:1px solid #ffb09f;
+      border-radius: 44px 44px
+;display:inline-block
+;width:150px;
+padding:10px;
+text-align:center;
+  }
+  .mobile__nav {
+    display:none;
+    @media only screen and (max-width: 640px) {
+        display:flex;
+        margin:0;
+       
+    }
+    a{
+        @media only screen and (max-width: 640px)  {
+            
+            padding:0;
+            display:flex;
+            margin:0;
+            border:none;
+            font-size:10px;
+width:auto;
+        }
+        
+        
+        
+    }
+}
+  
+      }
+
+    header {
+        @media only screen and (max-width: 640px) 
+    {
+       padding:5em;
+        height:auto;
+    }
+        span {
+            color:#CBB5EA;
+            font-size:18px;
+            margin:0;
+            line-height:0;
+            font-weight:100;
+            margin-right:.25em;
+            
+        }
+        text-align:left;
+        h1 {
+            color:#000;
+            text-align:center;
+            font-weight:100;
+            font-size:4rem;
+            line-height:1.2;
+            padding:0;
+            margin:0;
+            text-align:left;
+
+            @media only screen and (max-width: 640px) {
+                font-size:9vw;
+               }
+
+        }
+        p {
+            font-size:14px;
+            @media only screen and (max-width: 640px) {
+            font-size:3vw;
+             
+         }
+        }
+        background:#fff;
+        ul li {
+            padding:0;
+         font-size:13px;
+            line-height:0;
+
+            a {
+                line-height:1.2em;
+                
+            }
+            
+              
+        }
+    }
+
+    .wrapper {
+       border:2px solid red;
+        
+        padding:25px 50px;
+
+    }
+
+ 
+      a{
+        color: #6E5C34;
+        text-decoration: none;
+        display:block;
+        margin: 20px auto;
+        position: relative;
+        overflow: hidden;
+        padding:0 6px;
+        text-transform: uppercase;
+        transition: color .3s cubic-bezier(0.11, 0.7, 0, 1);
+        
+        font-size: 13px;
+        letter-spacing: .15rem;
+        line-height: 1.8;
+      }
+      .link__hover:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #ffaabc;
+        content: "";
+        transform: scale(0);
+        transition: transform .3s cubic-bezier(0.11, 0.7, 0, 1);
+      }
+      
+      .link__hover:hover:after {
+        transform: scale(1);
+      }
+header{   z-index:1;
+
+   
+   .container {
+    @media only screen and (max-width: 640px) {
+        background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:cover;
+        background-repeat:no-repeat;
+        
+         
+       }
+       
+   }
+      
+}
+      .pastel__box {
+          position:absolute;
+          top:0;
+          right:0;
+          z-index:999999;
+       
+          img {
+            @media only screen and (max-width: 640px) {
+                display:none;
+                 
+               }
+          }
+         
+
+       
+      }
+
+      body {
+        font-family:'Glacial indifference';
+      }
+
+      .button {
+        position: relative;
+        appearance: none;
+       
+        padding: 1em;
+        border: none;
+        
+        font-size: 1em;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        border-radius: 100px;
+        border:none;
+        
+        span {
+            position: relative;
+            pointer-events: none;
+        }
+        
+        &::before {
+            --size: 0;
+    
+            content: '';
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--size);
+            height: var(--size);
+            background: #B993D6;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to bottom, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to bottom, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            
+            transform: translate(-50%, -50%);
+            transition: width .2s ease, height .2s ease;
+        }
+        
+        &:hover::before {
+            --size: 400px;
+        }
+    }
+
+    ///main styling occurs here
+
+    .main {
+        background:#f4f5f8;
+        padding:50px;
+     
+   
+    @media only screen and (max-width: 640px) {
+        width:100%;}
+    
+    span {
+        color:yellow;
+    }
+    
+    ul {
+        display:inline-flex;
+    }
+    h2 {
+        
+        font-weight:bold;
+        color:#000;
+        margin:0;
+        padding:0;
+       
+    }
+    p {
+        color:#000;
+        font-size:14px;
+       margin:0;
+       padding:0;
+    }
+    
+    
+    
+
+
+
+      
+        
+         
+    
+            
+        
+    svg {
+        color:#CBB5EA;
+        &:hover {
+                color:#CBF0B8;
+            }
+       
+    }
+p span {
+   
+    display:inline-flex;
+  
+
+        text-decoration:underline;
+        text-decoration-color:#CBF0B8;
+    text-decoration-style: wavy;
+  
+    
+ 
+}
+ a {
+    display:inline-block;
+    margin:0;
+    padding:0;
+    text-align:left;
+   font-size:inherit;
+   text-transform:none;
+   font-family:inherit;
+   font-style:inherit;
+   font-weight:inherit;
+   line-height:inherit;
+height:auto;
+overflow:inherit;
+letter-spacing:inherit;
+color:#000;
+text-decoration:underline;
+text-decoration-color:#CBF0B8;
+    
+
+ &:hover {
+     color:#CBF0B8;
+ }
+
+}
+        img {
+            border-radius:25%;
+            width:186px;
+            height:229px;
+            display:block;
+            margin-left:auto;
+            
+            @media only screen and (max-width: 640px) {
+                width:75%;
+                height:75%;
+                margin:0 auto;
+                
+            }
+            
+        }
+    }
+     .twice {
+        background:url('http://chiaracodes.com/bg.png');  
+         
+        background-repeat:no-repeat;
+     }
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+       
+   span {
+    margin-bottom:3em;
+    font-size:2em;
+   }
+        
+}
+
+
+    svg {
+        width:25px;
+        height:25px;
+       
+    }
+
+
+ 
+
+ 
+.box__flex {
+   width:25%;
+    display:inline-flex;
+    margin:1em;
+    margin-bottom:1em;
+    flex-flow:wrap;
+    justify-content:center;
+    text-align:center;
+    img {
+        width:95%;
+        height:95%
+;display:block;
+margin:0 auto;
+       
+    }
+    @media only screen and (max-width: 640px) {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        padding:2em;
+    }
+    h4 {
+        font-size:30px;
+        font-weight:100;
+        text-align:left;
+       
+    }
+    p {font-size:17px;
+    text-align:left;
+
+    @media only screen and (max-width: 640px) {
+      font-size:14px;
+ 
+        }}
+}   
+.content {
+    background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:20% auto;
+        background-position-x:0%;
+        background-position-y:0%;
+        background-repeat:no-repeat;
+}
+.content .inner__wrapper{
+    padding:0;
+    margin:0;
+    
+
+a {
+    border:none;
+    width:100%;
+}
+li {
+    width:100%;
+}
+}
+
+.content {
+
+padding:25px 50px;
+
+    .wrapper {
+     max-width:75%;
+     margin-right:auto;
+     border:none;
+    
+    @media only screen and (max-width: 640px) {
+        max-width:100%;
+
+    }
+}
+h2 {
+    margin:0;
+    padding:0;
+    font-size:48px;
+
+    @media only screen and (max-width: 640px) {
+        font-size:7vw;
+    }
+}
+    p {font-size:14px;}
+  
+    
+    span {
+        color:#CBB5EA;
+        display:inline-block;
+    }
+}
+
+html {
+    font-size: 2vw;
+}
+
+h2 {
+    font-size:40px;
+}
+
+
+
+.skills {
+  
+        width:80%;
+        display:flex;
+        flex-flow:wrap;
+    
+        background:url('http://chiaracodes.com/decor_pastels.png');
+        background-size:20% auto;
+        background-position-x:100%;
+        background-position-y:50%;
+        background-repeat:no-repeat;
+    
+        padding:35px 50px;
+.copy__icons {
+    
+    
+           
+        
+    max-width:45%;
+    margin:0 auto;
+        ul {
+           
+            display:flex;
+            flex-flow:wrap;
+        }
+        li {
+            margin:.5em;
+        }
+        ul li:nth-child(1n+1) {
+            color:#caf1b6;
+        }
+        ul li:nth-child(2n+2) {
+            color:#cbb4ec;
+        }
+
+        ul li:nth-child(3n+3) {
+            color:#b2d6ef;
+        }
+        
+    
+}
+}
+
+.homepage-hero-module {
+    opacity:.5;
+    greyscale:50%;
+
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+

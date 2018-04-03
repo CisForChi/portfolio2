@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta charset="UTF-8">
 	<title>C H I A R A</title>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js">
 	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/css/swiper.css">
 	<link href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css" rel=
 	"stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.esm.bundle.js"></script>
 	<link href="public/styles/style.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
@@ -57,23 +62,21 @@
 		<span class="dwn__btn"><i class=
 		"fas fa-chevron-down"></i></span>
 	</header>
+
 	<section class="main">
 		<div class="container">
-			<div class="box__overlay">
-				<div class="copy__left">
+		
+			
+					<p>about</p>
 					<h2>Hello!</h2>
 					<p>I'm a Toronto-based Web Developer. If i'm not coding at some of the city's best cafés, you may find me biking
-					around thinking about my next projects.</p>
-					<p>I have a diverse set of skills; ranging from HTML5, CSS, but breaking those down with methodology (BEM) and
-					preproccesers (SCSS) to ensure organized and clean code. I prefer coding from scratch, but am versed in
-					frameworks. Adding interactivity and dynamic contents on my projects; generating data through API's, Javascript
-					and its libraries excite me the most, as the possibilities are endless. PHP and its counterpart, Wordpress, are my
-					prefered CMS. <span><a href="twitter.com"><i class="fab fa-twitter"></i></a></span> <span><a href=
+					around thinking about my next projects.
+				<span><a href="twitter.com"><i class="fab fa-twitter"></i></a></span> <span><a href=
 					"linkedin.com"><i class="fab fa-linkedin"></i></a></span> <span><a href="github.com"><i class=
 					"fab fa-github"></i></a></span></p>
-				</div>
-				<div class="copy__left right"><img src="http://chiaracodes.com/portfolio_shot.jpeg"></div>
-			</div>
+			
+			<!-- <img src="http://chiaracodes.com/portfolio_shot.jpeg"> -->
+			
 		</div>
 	</section>
 	<section>
@@ -113,7 +116,37 @@
 				</div>
 			</div>
 		</div>
-	</section><!-- <section class="skills">
+	</section>
+
+	
+	<section class="video">
+
+			<div class="homepage-hero-module">
+					<div class="video-container">
+						<div class="filter"></div>
+						<video autoplay loop class="fillWidth">
+							<source src="http://chiaracodes.com/MP4/Hey-World.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+							<source src="http://chiaracodes.com/WEBM/Hey-World.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+						</video>
+						
+					</div>
+				</div>
+	</section>
+	
+	<footer>
+<div class="container">
+
+		<ul>
+				<li>about</li>
+				<li>Contact</li>
+				<li>copyright</li>
+				<li>lol</li>
+				<li>yousuck</li>
+			</ul>
+</div>
+		
+	</footer>
+	<!-- <section class="skills">
             <div class="container">
 
         
@@ -196,6 +229,72 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js">
 	</script> 
 	<script src="public/scripts/main.js">
+	</script>
+	<script>
+	
+	$( document ).ready(function() {
+
+scaleVideoContainer();
+
+initBannerVideoSize('.video-container .poster img');
+initBannerVideoSize('.video-container .filter');
+initBannerVideoSize('.video-container video');
+
+$(window).on('resize', function() {
+	scaleVideoContainer();
+	scaleBannerVideoSize('.video-container .poster img');
+	scaleBannerVideoSize('.video-container .filter');
+	scaleBannerVideoSize('.video-container video');
+});
+
+});
+
+function scaleVideoContainer() {
+
+var height = $(window).height() + 1;
+var unitHeight = parseInt(height) + 'px';
+$('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+$(element).each(function(){
+	$(this).data('height', $(this).height());
+	$(this).data('width', $(this).width());
+});
+
+scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+var windowWidth = $(window).width(),
+windowHeight = $(window).height() + 1,
+videoWidth,
+videoHeight;
+
+// console.log(windowHeight);
+
+$(element).each(function(){
+	var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+	$(this).width(windowWidth);
+
+	if(windowWidth < 1000){
+		videoHeight = windowHeight;
+		videoWidth = videoHeight / videoAspectRatio;
+		$(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+		$(this).width(videoWidth).height(videoHeight);
+	}
+
+	$('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+});
+}
+	
 	</script>
 </body>
 </html>
