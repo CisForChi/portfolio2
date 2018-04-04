@@ -758,8 +758,10 @@ header{
     align-items:center;
 }
 .logo{
-    width:36px;
-}
+    display:block;
+    font-size:4rem;
+color:#000;
+font-weight:bold;}
 .navbar-link{
     color:var(--grey);
     margin-left:12px;
