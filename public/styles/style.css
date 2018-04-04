@@ -724,7 +724,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   max-width: 500px; }
 
 .footer-content h1 {
-  color: #fff;
+  color: #000;
   margin-bottom: 25px;
   margin-top: 0; }
 
@@ -1016,20 +1016,20 @@ header {
   margin-bottom: 0; }
 
 :root {
-  --primary:#99a3e8;
-  --primary-dark:#607cc7;
-  --black:#27303b;
-  --grey:#526173;
-  --grey-light:#a3afbf;
-  --grey-bg:#f5f7f9; }
+  --primary: #99a3e8;
+  --primary-dark: #607cc7;
+  --black: #27303b;
+  --grey: #526173;
+  --grey-light: #a3afbf;
+  --grey-bg: #f5f7f9; }
 
 body {
   font-family: Open Sans,sans-serif;
   font-size: 18px;
   color: var(--grey);
   -webkit-font-smoothing: antialiased;
-  --mdc-layout-grid-margin:20px;
-  --mdc-layout-grid-gutter:40px;
+  --mdc-layout-grid-margin: 20px;
+  --mdc-layout-grid-gutter: 40px;
   margin: 0;
   background-color: #fff; }
 
@@ -1117,11 +1117,11 @@ p {
   height: 1300px !important; }
 
 .product-wrapper {
-  --mdc-layout-grid-margin:5px;
-  --mdc-layout-grid-gutter:50px; }
+  --mdc-layout-grid-margin: 5px;
+  --mdc-layout-grid-gutter: 50px; }
 
 .talks-grid, .testimonials {
-  --mdc-layout-grid-margin:10px; }
+  --mdc-layout-grid-margin: 10px; }
 
 @media (max-width: 1200px) {
   .mdc-layout-grid__cell--span-2 {
@@ -1157,15 +1157,15 @@ p {
 
 @media (max-width: 840px) {
   body {
-    --mdc-layout-grid-margin:40px;
-    --mdc-layout-grid-gutter:16px; }
+    --mdc-layout-grid-margin: 40px;
+    --mdc-layout-grid-gutter: 16px; }
   .max-width {
     padding-left: 5%;
     padding-right: 5%; }
   .talks-grid .mdc-layout-grid__cell--span-4, .testimonials-grid .mdc-layout-grid__cell--span-4 {
     grid-column-end: span 8; }
   .blog-wrapper, .work-wrapper {
-    --mdc-layout-grid-margin:8px; }
+    --mdc-layout-grid-margin: 8px; }
   .mdc-layout-grid__cell--span-2 {
     display: none; }
   h1 {
@@ -1309,7 +1309,7 @@ body.no-scroll {
   margin-bottom: 80px; }
 
 .courses-grid {
-  --mdc-layout-grid-margin:10px; }
+  --mdc-layout-grid-margin: 10px; }
 
 .course-image {
   background-size: cover;
