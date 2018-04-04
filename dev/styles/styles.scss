@@ -13,7 +13,7 @@
     margin:0 auto;
     box-sizing:border-box;
     padding:8px;
-    padding:calc(var(--mdc-layout-grid-margin,16px) - var(--mdc-layout-grid-gutter,16px)/ 2);
+    padding:calc(var(--mdc-layout-grid-margin,12px) - var(--mdc-layout-grid-gutter,12px)/ 2);
 }
 .mdc-layout-grid__cell{
     margin:8px;
@@ -654,6 +654,13 @@
 }
 .card-content{
     padding:30px;
+h5 {
+    a {
+        text-decoration:underline;
+    }
+
+
+}
 }
 .card-tags{
     display:flex;
@@ -760,7 +767,7 @@ header{
 .logo{
     display:block;
     font-size:4rem;
-color:#000;
+color:#27303b;
 font-weight:bold;}
 .navbar-link{
     color:var(--grey);
@@ -938,7 +945,7 @@ body{
     color:#fff;
     background:var(--primary-dark);
 }
-h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5, .logo{
     font-family:PT Serif,serif;
     font-weight:700;
     color:var(--black);

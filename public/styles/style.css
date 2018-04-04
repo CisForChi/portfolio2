@@ -146,7 +146,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 8px;
-  padding: calc(var(--mdc-layout-grid-margin,16px) - var(--mdc-layout-grid-gutter,16px)/ 2); }
+  padding: calc(var(--mdc-layout-grid-margin,12px) - var(--mdc-layout-grid-gutter,12px)/ 2); }
 
 .mdc-layout-grid__cell {
   margin: 8px;
@@ -686,6 +686,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .card-content {
   padding: 30px; }
+  .card-content h5 a {
+    text-decoration: underline; }
 
 .card-tags {
   display: -webkit-box;
@@ -813,7 +815,7 @@ header {
 .logo {
   display: block;
   font-size: 4rem;
-  color: #000;
+  color: #27303b;
   font-weight: bold; }
 
 .navbar-link {
@@ -1044,7 +1046,7 @@ body {
   color: #fff;
   background: var(--primary-dark); }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, .logo {
   font-family: PT Serif,serif;
   font-weight: 700;
   color: var(--black); }
