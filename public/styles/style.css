@@ -542,13 +542,17 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   min-height: 62vh;
   margin-top: 20px; }
 
-.about img {
-  border-radius: 50%; }
+img {
+  border-radius: 50%;
+  margin: 1em;
+  width: 25%;
+  height: 25%; }
 
 .about-imgWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -557,7 +561,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
           justify-content: center; }
 
 .about h5 {
-  font-weight: 400;
+  font-weight: 200;
   line-height: 43px;
   letter-spacing: -.6px; }
 
@@ -567,7 +571,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .blog-wrapper {
   display: -webkit-box;
@@ -675,7 +682,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .card-img {
   background-color: var(--grey-light);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: top;
   height: 230px;
@@ -731,12 +738,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin-top: 0; }
 
 .footer-content p {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--black);
   margin-bottom: 15px; }
 
 .footer-content a {
-  color: #fff;
+  color: #000;
   font-weight: 600; }
+  .footer-content a:hover {
+    color: white; }
 
 .footer-content a img {
   padding-right: 4px; }
@@ -759,12 +768,12 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 .footer-label {
   font-size: 14px;
-  background-color: #DCC6E0;
+  background-color: var(--black);
   padding-top: 20px;
   padding-bottom: 20px; }
 
 .footer-label span {
-  color: var(--primary); }
+  color: #EEE7F1; }
 
 .footer-icons {
   display: -webkit-box;
@@ -777,6 +786,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 0; }
+  .footer-icons svg {
+    color: #fff; }
 
 .footer-icon {
   margin: 10px 20px;
@@ -803,6 +814,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
@@ -813,23 +825,32 @@ header {
           align-items: center; }
 
 .logo {
+  font: 900 22x/22px;
+  letter-spacing: 2px;
+  color: var(--black);
+  text-shadow: -2px -1px 0px rgba(153, 163, 232, 0.5);
+  position: relative;
+  text-transform: uppercase; }
+
+.logo::after {
+  content: "";
+  border-top: 2px solid #000;
+  margin: 2rem 0;
   display: block;
-  font-size: 4rem;
-  color: #27303b;
-  font-weight: bold; }
+  width: 4rem; }
 
 .navbar-link {
-  color: var(--grey);
+  color: var(--black);
   margin-left: 12px;
   margin-right: 12px;
-  -webkit-transition: color .2s;
-  transition: color .2s;
+  -webkit-transition: color .5s;
+  transition: color .5s;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400; }
 
 .navbar-link:hover {
-  color: var(--black); }
+  color: pink; }
 
 .menu .btn-primary-sm {
   margin-left: 14px; }
@@ -1021,20 +1042,20 @@ header {
   margin-bottom: 0; }
 
 :root {
-  --primary:#99a3e8;
-  --primary-dark:#607cc7;
-  --black:#27303b;
-  --grey:#526173;
-  --grey-light:#a3afbf;
-  --grey-bg:#f5f7f9; }
+  --primary: #99a3e8;
+  --primary-dark: #607cc7;
+  --black: #27303b;
+  --grey: #526173;
+  --grey-light: #a3afbf;
+  --grey-bg: #f5f7f9; }
 
 body {
   font-family: Open Sans,sans-serif;
   font-size: 18px;
   color: var(--grey);
   -webkit-font-smoothing: antialiased;
-  --mdc-layout-grid-margin:20px;
-  --mdc-layout-grid-gutter:40px;
+  --mdc-layout-grid-margin: 20px;
+  --mdc-layout-grid-gutter: 40px;
   margin: 0;
   background-color: #fff; }
 
@@ -1088,7 +1109,7 @@ p {
   font-weight: 600; }
 
 .text-link {
-  text-decoration: none;
+  text-decoration: underline;
   display: inline-block;
   color: var(--primary-dark); }
 
@@ -1122,11 +1143,11 @@ p {
   height: 1300px !important; }
 
 .product-wrapper {
-  --mdc-layout-grid-margin:5px;
-  --mdc-layout-grid-gutter:50px; }
+  --mdc-layout-grid-margin: 5px;
+  --mdc-layout-grid-gutter: 50px; }
 
 .talks-grid, .testimonials {
-  --mdc-layout-grid-margin:10px; }
+  --mdc-layout-grid-margin: 10px; }
 
 @media (max-width: 1200px) {
   .mdc-layout-grid__cell--span-2 {
@@ -1135,6 +1156,8 @@ p {
     grid-column-end: span 5; }
   .talks-grid .mdc-layout-grid__cell--span-4, .testimonials-grid .mdc-layout-grid__cell--span-4 {
     grid-column-end: span 4; }
+  .mdc-layout-grid__cell--span-4-2 {
+    grid-column-end: span 8; }
   .mdc-layout-grid__cell--span-8 {
     grid-column-end: span 10; }
   h1 {
@@ -1162,19 +1185,19 @@ p {
 
 @media (max-width: 840px) {
   body {
-    --mdc-layout-grid-margin:40px;
-    --mdc-layout-grid-gutter:16px; }
+    --mdc-layout-grid-margin: 40px;
+    --mdc-layout-grid-gutter: 16px; }
   .max-width {
     padding-left: 5%;
     padding-right: 5%; }
   .talks-grid .mdc-layout-grid__cell--span-4, .testimonials-grid .mdc-layout-grid__cell--span-4 {
     grid-column-end: span 8; }
   .blog-wrapper, .work-wrapper {
-    --mdc-layout-grid-margin:8px; }
+    --mdc-layout-grid-margin: 8px; }
   .mdc-layout-grid__cell--span-2 {
     display: none; }
   h1 {
-    font-size: 46px;
+    font-size: 32px;
     line-height: 1.4; }
   .navbar-link {
     margin-right: 10px; }
@@ -1190,7 +1213,15 @@ p {
     width: 180px;
     height: 180px; }
   .courses .mdc-layout-grid__cell--span-8-tablet {
-    grid-column-end: span 8; } }
+    grid-column-end: span 8; }
+  .about-contentWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .about-contentWrap img {
+      width: 56%;
+      height: 25%; } }
 
 @media (max-width: 480px) {
   #opl-ribbon {
@@ -1314,7 +1345,7 @@ body.no-scroll {
   margin-bottom: 80px; }
 
 .courses-grid {
-  --mdc-layout-grid-margin:10px; }
+  --mdc-layout-grid-margin: 10px; }
 
 .course-image {
   background-size: cover;

@@ -534,23 +534,28 @@
 .about{
     min-height:62vh;
     margin-top:20px;
-}
-.about img{
+} img{
     border-radius:50%;
+ margin:1em;
+    width:25%;
+    height:25%;
 }
 .about-imgWrap{
-    display:flex;
+    display:inline-flex;
+    margin:em;
     align-items:center;
     justify-content:center;
 }
 .about h5{
-    font-weight:400;
+    font-weight:200;
     line-height:43px;
     letter-spacing:-.6px;
 }
 .about-contentWrap{
     display:flex;
     align-items:center;
+    justify-content:space-between;
+    
 }
 .blog-wrapper{
     display:flex;
@@ -644,7 +649,7 @@
 }
 .card-img{
     background-color:var(--grey-light);
-    background-size:cover;
+    background-size:contain;
     background-repeat:no-repeat;
     background-position:top;
     height:230px;
@@ -696,12 +701,16 @@ h5 {
     margin-top:0;
 }
 .footer-content p{
-    color:hsla(0,0%,100%,.75);
+    color:var(--black);
     margin-bottom:15px;
 }
 .footer-content a{
-    color:#fff;
+    color:#000;
     font-weight:600;
+
+    &:hover{
+ color:white;
+    }
 }
 .footer-content a img{
     padding-right:4px;
@@ -724,18 +733,22 @@ h5 {
 }
 .footer-label{
     font-size:14px;
-    background-color:#DCC6E0;
+    background-color:var(--black);
     padding-top:20px;
     padding-bottom:20px;
 }
 .footer-label span{
-    color:var(--primary);
+    color:#EEE7F1;
 }
 .footer-icons{
     display:flex;
     justify-content:center;
     align-items:center;
     padding:20px 0;
+
+    svg {
+        color:#fff;
+    }
 }
 .footer-icon{
     margin:10px 20px;
@@ -759,27 +772,44 @@ header{
 }
 .menu,.navbar-grid{
     display:flex;
+    position:relative;
     justify-content:space-between;
 }
 .menu{
     align-items:center;
 }
 .logo{
-    display:block;
-    font-size:4rem;
-color:#27303b;
-font-weight:bold;}
+   
+        font: 900 22x/22px;
+        letter-spacing: 2px;
+        color:var(--black);
+        text-shadow: -2px -1px 0px rgba(153,163,232, 0.5);
+          position:relative;
+        text-transform: uppercase;
+       
+    }
+
+    .logo::after {
+        content:"";
+        border-top: 2px solid #000;
+        margin: 2rem 0;
+        display: block;
+        width: 4rem;
+        
+    }
+
+  
 .navbar-link{
-    color:var(--grey);
+    color:var(--black);
     margin-left:12px;
     margin-right:12px;
-    transition:color .2s;
+    transition:color .5s;
     text-decoration:none;
     font-size:16px;
     font-weight:400;
 }
 .navbar-link:hover{
-    color:var(--black)
+    color:pink;
 }
 .menu .btn-primary-sm{
     margin-left:14px;
@@ -987,7 +1017,7 @@ p{
     font-weight:600;
 }
 .text-link{
-    text-decoration:none;
+    text-decoration:underline;
     display:inline-block;
     color:var(--primary-dark);
 }
@@ -1035,6 +1065,9 @@ p{
     }
     .talks-grid .mdc-layout-grid__cell--span-4,.testimonials-grid .mdc-layout-grid__cell--span-4{
         grid-column-end:span 4;
+    }
+    .mdc-layout-grid__cell--span-4-2 {
+        grid-column-end:span 8;
     }
     .mdc-layout-grid__cell--span-8{
         grid-column-end:span 10;
@@ -1091,7 +1124,7 @@ p{
         display:none;
     }
     h1{
-        font-size:46px;
+        font-size:32px;
         line-height:1.4;
     }
     .navbar-link{
@@ -1115,6 +1148,15 @@ p{
     }
     .courses .mdc-layout-grid__cell--span-8-tablet{
         grid-column-end:span 8;
+    }
+
+    .about-contentWrap {
+        flex-direction:column;
+
+        img {
+            width: 56%;
+            height: 25%;
+        }
     }
 }
 @media (max-width:480px){
