@@ -783,20 +783,25 @@ header{
         font: 900 22x/22px;
         letter-spacing: 2px;
         color:var(--black);
-        text-shadow: -2px -1px 0px rgba(153,163,232, 0.5);
+       
           position:relative;
         text-transform: uppercase;
-       
-    }
+        animation: 
+    pulse 2s ease infinite alternate, 
+    nudge 5s linear infinite alternate;
 
-    .logo::after {
-        content:"";
-        border-top: 2px solid #000;
-        margin: 2rem 0;
-        display: block;
-        width: 4rem;
-        
+    @keyframes pulse {
+        0%, 100% {
+            text-shadow: -3px -2px 0px rgba(0,0,0,.7);
+        }
+        50% {
+            text-shadow: -3px -2px 0px rgba(153,163,232, 0.9);
+        }
+      }
     }
+    
+
+  
 
   
 .navbar-link{
